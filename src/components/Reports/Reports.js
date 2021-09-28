@@ -97,6 +97,10 @@ const Reports = () => {
     { label: "q9", key: "answer9" },
     { label: "q10", key: "answer10" },
     { label: "q11", key: "answer11" },
+    { label: "q12", key: "answer12" },
+    { label: "q13", key: "answer13" },
+    { label: "q14", key: "answer14" },
+    { label: "q15", key: "answer15" },
   ];
   return (
     <div className="mt-5">

@@ -213,6 +213,10 @@ const SurveyBody = () => {
             <option value="sheikh">সেখ</option>
             <option value="derby">ডার্বি</option>
             <option value="royals">রয়েল</option>
+            <option value="benson">বেনসন</option>
+            <option value="marlboro">মার্লবরো</option>
+            <option value="hollywood">হলিউড</option>
+            <option value="pilot">পাইলট</option>
           </Form.Control>
         </Form.Group>
       </div>
@@ -266,12 +270,13 @@ const SurveyBody = () => {
         className="mt-2"
       >
         <h6>
-          ৭. উনি আপনাকে র‍্যালী সিগারেট এর কয়টি ভেরিয়েন্ট/ধরণ/ ফ্লেভার/ স্বাদ এর
+          ৭. উনি আপনাকে র‍্যালী সিগারেট এর কয়টি ভেরিয়েন্ট/ধরণ/ফ্লেভার/স্বাদ এর
           কথা বলেছেন?
         </h6>
         <Form.Group onChange={q7value} as={Row}>
           <Form.Control as="select" className="w-50 ml-3">
             <option>...</option>
+            <option value="type0">০ ধরণ</option>
             <option value="type1">১ ধরণ</option>
             <option value="type2">২ ধরণ</option>
             <option value="type3">৩ ধরণ</option>
@@ -306,11 +311,12 @@ const SurveyBody = () => {
           <Form.Group onChange={q9value} as={Row}>
             <Form.Control as="select" className="w-50 ml-3">
               <option>...</option>
-              <option value="1">র‍্যালী ভার্ব / ফুল ফ্লেভার</option>
-              <option value="2">র‍্যালী আইস/ লবঙ্গ স্বাদ</option>
-              <option value="3">
-                র‍্যালী বোল্ট/ দারচিনি স্বাদ/ মসলা স্বাদ
+              <option value="rallyVerve">র‍্যালী ভার্ব/ফুল ফ্লেভার</option>
+              <option value="rallyIce">র‍্যালী আইস/লবঙ্গ স্বাদ</option>
+              <option value="rallyBolt">
+                র‍্যালী বোল্ট/দারচিনি স্বাদ/মসলা স্বাদ
               </option>
+              <option value="aboveAll">উপরের সবগুলো</option>
             </Form.Control>
           </Form.Group>
         </div>
@@ -363,6 +369,7 @@ const SurveyBody = () => {
         <Form.Group onChange={q12value} as={Row}>
           <Form.Control as="select" className="w-50 ml-3">
             <option>...</option>
+            <option value="0stick">০ শলাকা</option>
             <option value="1stick">১ শলাকা</option>
             <option value="2stick">২ শলাকা</option>
             <option value="3stick">৩ শলাকা</option>
