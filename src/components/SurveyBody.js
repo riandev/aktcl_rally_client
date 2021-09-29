@@ -197,7 +197,7 @@ const SurveyBody = () => {
         }}
         className="mt-2"
       >
-        <h6>৪. আপনি বর্তমানে কোন ব্র্যান্ডের সিগারেট খান?</h6>
+        <h6>৪. আপনি সাধারণত কোন ব্র্যান্ডের সিগারেট খান?</h6>
         <p className="text-secondary">
           (উত্তর হ্যাঁ হলে পরবর্তি প্রশ্নে চলে যাব। না হলে ধন্যবাদ দিয়ে সংযোগ
           বিচ্ছিন্ন করবো)
@@ -208,7 +208,8 @@ const SurveyBody = () => {
             <option value="rally">র‌্যালী</option>
             <option value="star">স্টার</option>
             <option value="navy">নেভি</option>
-            <option value="luckyStrike/goldLeaf">লাকিস্ট্রাইক/গোল্ড লিফ</option>
+            <option value="luckyStrike">লাকিস্ট্রাইক</option>
+            <option value="goldLeaf">গোল্ড লিফ/JPGL</option>
             <option value="marise">মেরিস</option>
             <option value="sheikh">সেখ</option>
             <option value="derby">ডার্বি</option>
@@ -363,7 +364,7 @@ const SurveyBody = () => {
         className="mt-2"
       >
         <h6>
-          ১২. এক শলাকা র‌্যালী খাওয়ানোর পর কত শলাকা পরবর্তিতে খাওয়ার জন্য
+          ১২. এক শলাকা র‌্যালী খাওয়ানোর পর আপনাকে পরবর্তীতে কত শলাকা খাওয়ার জন্য
           দিয়েছে?
         </h6>
         <Form.Group onChange={q12value} as={Row}>
@@ -411,7 +412,7 @@ const SurveyBody = () => {
         style={{ display: q14 === null ? "none" : "block" }}
         className="mt-2"
       >
-        <h6>১৫. আপনি কি বর্তমানে সিগারেট টি খাচ্ছেন?</h6>
+        <h6>১৫. উনি আসার পর থেকে কি আপনি র‍্যালী সিগারেট টি খাচ্ছেন?</h6>
         <Form.Group onChange={q15value} as={Row}>
           <Form.Control as="select" className="w-50 ml-3">
             <option>...</option>
