@@ -379,7 +379,7 @@ const SurveyBody = () => {
           </Form.Control>
         </Form.Group>
       </div>
-      <div
+      {/* <div
         style={{ display: q12 === null ? "none" : "block" }}
         className="mt-2"
       >
@@ -391,9 +391,9 @@ const SurveyBody = () => {
             <option value="no">না</option>
           </Form.Control>
         </Form.Group>
-      </div>
+      </div> */}
       <div
-        style={{ display: q13 === null ? "none" : "block" }}
+        style={{ display: q12 === null ? "none" : "block" }}
         className="mt-2"
       >
         <h6>
