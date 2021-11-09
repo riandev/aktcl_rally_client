@@ -25,7 +25,7 @@ const Login = () => {
   // console.log(loginTime, loginDate);
 
   useEffect(() => {
-    fetch("http://192.168.10.11:5020/agent?email=" + email)
+    fetch("http://192.168.10.12:5020/agent?email=" + email)
       .then((res) => res.json())
       .then((data) => setMatchedAgent(data))
       .catch((err) => console.log(err));

@@ -7,13 +7,13 @@ const ViewTerritoryReport = () => {
   const [tmstmr, setTmstmr] = useState({});
   console.log(tmstmr);
   useEffect(() => {
-    fetch("http://192.168.10.11:5020/territoryReports")
+    fetch("http://192.168.10.12:5020/territoryReports")
       .then((res) => res.json())
       .then((data) => setTerritoryReport(data));
   }, []);
 
   useEffect(() => {
-    fetch("http://192.168.10.11:5020/reportTable")
+    fetch("http://192.168.10.12:5020/reportTable")
       .then((res) => res.json())
       .then((data) => setTmstmr(data[0]));
   }, []);

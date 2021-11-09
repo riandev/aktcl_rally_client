@@ -6,7 +6,7 @@ const TerritorySplit = () => {
   const [splitData, setSplitData] = useState([]);
   console.log(splitData);
   useEffect(() => {
-    fetch("http://192.168.10.11:5020/splitReport")
+    fetch("http://192.168.10.12:5020/splitReport")
       .then((res) => res.json())
       .then((data) => setSplitData(data));
   }, []);

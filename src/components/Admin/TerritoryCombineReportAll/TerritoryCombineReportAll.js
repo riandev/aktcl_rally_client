@@ -7,7 +7,7 @@ import fifotech from "../../../images/logo_s.png";
 const TerritoryCombineReportAll = () => {
   const [combineTerritory, setCombineTerritory] = useState([]);
   useEffect(() => {
-    fetch("http://192.168.10.11:5020/territoryCombineReport")
+    fetch("http://192.168.10.12:5020/territoryCombineReport")
       .then((res) => res.json())
       .then((data) => setCombineTerritory(data));
   }, []);

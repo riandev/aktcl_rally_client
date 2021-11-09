@@ -5,7 +5,7 @@ import fifotech from "../../../images/logo_s.png";
 const TmsTmrCombineReport = () => {
   const [counted, setCounts] = useState([]);
   useEffect(() => {
-    fetch("http://192.168.10.11:5020/reportTable")
+    fetch("http://192.168.10.12:5020/reportTable")
       .then((res) => res.json())
       .then((data) => setCounts(data));
   }, []);
