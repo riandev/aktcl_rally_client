@@ -8,7 +8,7 @@ const SummaryReport = () => {
   const [summary, setSummary] = useState([]);
 
   useEffect(() => {
-    fetch("http://192.168.10.12:5020/territoryCombineReport")
+    fetch("http://192.168.200.10:5020/territoryCombineReport")
       .then((res) => res.json())
       .then((data) => setSummary(data));
   }, []);

@@ -6,7 +6,7 @@ import "./ViewTmsTmrReport.css";
 const ViewTmsTmrReport = () => {
   const [counted, setCounts] = useState([]);
   useEffect(() => {
-    fetch("http://192.168.10.12:5020/reportTable")
+    fetch("http://192.168.200.10:5020/reportTable")
       .then((res) => res.json())
       .then((data) => setCounts(data));
   }, []);

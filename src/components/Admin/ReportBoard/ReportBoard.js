@@ -50,7 +50,7 @@ const ReportBoard = () => {
 
   const handleConnected = () => {
     fetch(
-      "http://192.168.10.12:5020/updateConnectCall?reportDate=" + reportDate
+      "http://192.168.200.10:5020/updateConnectCall?reportDate=" + reportDate
     )
       .then((res) => res.json())
       .then((data) =>
@@ -63,7 +63,7 @@ const ReportBoard = () => {
       );
   };
   const handleCondition1 = () => {
-    fetch("http://192.168.10.12:5020/update1", {
+    fetch("http://192.168.200.10:5020/update1", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(condition1),
@@ -72,14 +72,14 @@ const ReportBoard = () => {
       .then((data) => setStatus1(data));
   };
   const handleTrueContact = () => {
-    fetch("http://192.168.10.12:5020/getTrueContact?reportDate=" + reportDate)
+    fetch("http://192.168.200.10:5020/getTrueContact?reportDate=" + reportDate)
       .then((res) => res.json())
       .then((data) =>
         setTrueContact([...data.map((d) => ({ _id: d._id, trueContact: 1 }))])
       );
   };
   const updateTrueContact = () => {
-    fetch("http://192.168.10.12:5020/updateTrueContact", {
+    fetch("http://192.168.200.10:5020/updateTrueContact", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(trueContact),
@@ -88,14 +88,14 @@ const ReportBoard = () => {
       .then((data) => setStatus2(data));
   };
   const handleSOB1 = () => {
-    fetch("http://192.168.10.12:5020/nonSOB1?reportDate=" + reportDate)
+    fetch("http://192.168.200.10:5020/nonSOB1?reportDate=" + reportDate)
       .then((res) => res.json())
       .then((data) =>
         setSOB1([...data.map((d) => ({ _id: d._id, nonSOB1: 1 }))])
       );
   };
   const updateSOB1 = () => {
-    fetch("http://192.168.10.12:5020/updatenonSOB1", {
+    fetch("http://192.168.200.10:5020/updatenonSOB1", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(sob1),
@@ -104,14 +104,14 @@ const ReportBoard = () => {
       .then((data) => setStatus3(data));
   };
   const handleSOB2 = () => {
-    fetch("http://192.168.10.12:5020/nonSOB2?reportDate=" + reportDate)
+    fetch("http://192.168.200.10:5020/nonSOB2?reportDate=" + reportDate)
       .then((res) => res.json())
       .then((data) =>
         setSOB2([...data.map((d) => ({ _id: d._id, nonSOB2_Final: 1 }))])
       );
   };
   const updateSOB2 = () => {
-    fetch("http://192.168.10.12:5020/updatenonSOB2", {
+    fetch("http://192.168.200.10:5020/updatenonSOB2", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(sob2),
@@ -120,14 +120,14 @@ const ReportBoard = () => {
       .then((data) => setStatus4(data));
   };
   const handleExtMSB = () => {
-    fetch("http://192.168.10.12:5020/extMSB?reportDate=" + reportDate)
+    fetch("http://192.168.200.10:5020/extMSB?reportDate=" + reportDate)
       .then((res) => res.json())
       .then((data) =>
         setextMSB([...data.map((d) => ({ _id: d._id, extMSB: 1 }))])
       );
   };
   const updateExtMSB = () => {
-    fetch("http://192.168.10.12:5020/updateextMSB", {
+    fetch("http://192.168.200.10:5020/updateextMSB", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(extMSB),
@@ -136,7 +136,7 @@ const ReportBoard = () => {
       .then((data) => setStatus6(data));
   };
   const handleNotContacted1 = () => {
-    fetch("http://192.168.10.12:5020/notContacted1?reportDate=" + reportDate)
+    fetch("http://192.168.200.10:5020/notContacted1?reportDate=" + reportDate)
       .then((res) => res.json())
       .then((data) =>
         setnotContacted1([
@@ -145,7 +145,7 @@ const ReportBoard = () => {
       );
   };
   const updateNotContacted1 = () => {
-    fetch("http://192.168.10.12:5020/updateNotContacted1", {
+    fetch("http://192.168.200.10:5020/updateNotContacted1", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(notContacted1),
@@ -154,7 +154,7 @@ const ReportBoard = () => {
       .then((data) => setStatus7(data));
   };
   const handleNotContacted2 = () => {
-    fetch("http://192.168.10.12:5020/notContacted2?reportDate=" + reportDate)
+    fetch("http://192.168.200.10:5020/notContacted2?reportDate=" + reportDate)
       .then((res) => res.json())
       .then((data) =>
         setnotContacted2([
@@ -163,7 +163,7 @@ const ReportBoard = () => {
       );
   };
   const updateNotContacted2 = () => {
-    fetch("http://192.168.10.12:5020/updateNotContacted2", {
+    fetch("http://192.168.200.10:5020/updateNotContacted2", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(notContacted2),
@@ -172,7 +172,7 @@ const ReportBoard = () => {
       .then((data) => setStatus8(data));
   };
   const handleNotContacted3 = () => {
-    fetch("http://192.168.10.12:5020/notContacted3?reportDate=" + reportDate)
+    fetch("http://192.168.200.10:5020/notContacted3?reportDate=" + reportDate)
       .then((res) => res.json())
       .then((data) =>
         setnotContacted3([
@@ -181,7 +181,7 @@ const ReportBoard = () => {
       );
   };
   const updateNotContacted3 = () => {
-    fetch("http://192.168.10.12:5020/updateNotContacted3", {
+    fetch("http://192.168.200.10:5020/updateNotContacted3", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(notContacted3),
@@ -190,7 +190,7 @@ const ReportBoard = () => {
       .then((data) => setStatus9(data));
   };
   const handleNotContacted4 = () => {
-    fetch("http://192.168.10.12:5020/notContacted4?reportDate=" + reportDate)
+    fetch("http://192.168.200.10:5020/notContacted4?reportDate=" + reportDate)
       .then((res) => res.json())
       .then((data) =>
         setnotContacted4([
@@ -199,7 +199,7 @@ const ReportBoard = () => {
       );
   };
   const updateNotContacted4 = () => {
-    fetch("http://192.168.10.12:5020/updateNotContacted4", {
+    fetch("http://192.168.200.10:5020/updateNotContacted4", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(notContacted4),
@@ -209,7 +209,7 @@ const ReportBoard = () => {
   };
   const handleNotContacted = () => {
     fetch(
-      "http://192.168.10.12:5020/finalNotContacted?reportDate=" + reportDate
+      "http://192.168.200.10:5020/finalNotContacted?reportDate=" + reportDate
     )
       .then((res) => res.json())
       .then((data) =>
@@ -219,7 +219,7 @@ const ReportBoard = () => {
       );
   };
   const updateNotContacted = () => {
-    fetch("http://192.168.10.12:5020/updateFinalNotContacted", {
+    fetch("http://192.168.200.10:5020/updateFinalNotContacted", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(finalNotContacted),
@@ -228,7 +228,9 @@ const ReportBoard = () => {
       .then((data) => setStatus11(data));
   };
   const handlePureNotContacted = () => {
-    fetch("http://192.168.10.12:5020/pureNotContacted?reportDate=" + reportDate)
+    fetch(
+      "http://192.168.200.10:5020/pureNotContacted?reportDate=" + reportDate
+    )
       .then((res) => res.json())
       .then((data) =>
         setFinalPureNotContacted([
@@ -237,7 +239,7 @@ const ReportBoard = () => {
       );
   };
   const updatePureNotContacted = () => {
-    fetch("http://192.168.10.12:5020/updateFinalPureNotContacted", {
+    fetch("http://192.168.200.10:5020/updateFinalPureNotContacted", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(finalPureNotContacted),
@@ -247,7 +249,7 @@ const ReportBoard = () => {
   };
 
   const handleFalseContact = () => {
-    fetch("http://192.168.10.12:5020/falseContact?reportDate=" + reportDate)
+    fetch("http://192.168.200.10:5020/falseContact?reportDate=" + reportDate)
       .then((res) => res.json())
       .then((data) =>
         setFalseContact([
@@ -256,7 +258,7 @@ const ReportBoard = () => {
       );
   };
   const updateFalseContact = () => {
-    fetch("http://192.168.10.12:5020/updateFalseContact", {
+    fetch("http://192.168.200.10:5020/updateFalseContact", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(falseContact),
@@ -266,7 +268,7 @@ const ReportBoard = () => {
   };
   const handleVerifyTrueContact = () => {
     fetch(
-      "http://192.168.10.12:5020/verifyFalseContact?reportDate=" + reportDate
+      "http://192.168.200.10:5020/verifyFalseContact?reportDate=" + reportDate
     )
       .then((res) => res.json())
       .then((data) =>
@@ -276,7 +278,7 @@ const ReportBoard = () => {
       );
   };
   const updateVerifyTrueContact = () => {
-    fetch("http://192.168.10.12:5020/updateVerifiedTrueContact", {
+    fetch("http://192.168.200.10:5020/updateVerifiedTrueContact", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(verifyTrueContact),
@@ -285,14 +287,14 @@ const ReportBoard = () => {
       .then((data) => setStatus14(data));
   };
   const handlenoFreeSample = () => {
-    fetch("http://192.168.10.12:5020/noFreeSample?reportDate=" + reportDate)
+    fetch("http://192.168.200.10:5020/noFreeSample?reportDate=" + reportDate)
       .then((res) => res.json())
       .then((data) =>
         setNoFreeSample([...data.map((d) => ({ _id: d._id, noFreeSample: 1 }))])
       );
   };
   const updatenoFreeSample = () => {
-    fetch("http://192.168.10.12:5020/updateNoFreeSample", {
+    fetch("http://192.168.200.10:5020/updateNoFreeSample", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(noFreeSample),
@@ -301,7 +303,7 @@ const ReportBoard = () => {
       .then((data) => setStatus15(data));
   };
   const handleLessFreeSample = () => {
-    fetch("http://192.168.10.12:5020/lessFreeSample?reportDate=" + reportDate)
+    fetch("http://192.168.200.10:5020/lessFreeSample?reportDate=" + reportDate)
       .then((res) => res.json())
       .then((data) =>
         setLessFreeSample([
@@ -310,7 +312,7 @@ const ReportBoard = () => {
       );
   };
   const updateLessFreeSample = () => {
-    fetch("http://192.168.10.12:5020/updateLessFreeSample", {
+    fetch("http://192.168.200.10:5020/updateLessFreeSample", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(lessFreeSample),
@@ -319,14 +321,14 @@ const ReportBoard = () => {
       .then((data) => setStatus16(data));
   };
   const handleTeaSnaks = () => {
-    fetch("http://192.168.10.12:5020/teaSnaks?reportDate=" + reportDate)
+    fetch("http://192.168.200.10:5020/teaSnaks?reportDate=" + reportDate)
       .then((res) => res.json())
       .then((data) =>
         setTeaSnaks([...data.map((d) => ({ _id: d._id, teaSnaks: 1 }))])
       );
   };
   const updateTeaSnaks = () => {
-    fetch("http://192.168.10.12:5020/updateTeaSnaks", {
+    fetch("http://192.168.200.10:5020/updateTeaSnaks", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(teaSnaks),
@@ -335,14 +337,14 @@ const ReportBoard = () => {
       .then((data) => setStatus17(data));
   };
   const handleRetention = () => {
-    fetch("http://192.168.10.12:5020/retention?reportDate=" + reportDate)
+    fetch("http://192.168.200.10:5020/retention?reportDate=" + reportDate)
       .then((res) => res.json())
       .then((data) =>
         setRetention([...data.map((d) => ({ _id: d._id, retention: 1 }))])
       );
   };
   const updateRetention = () => {
-    fetch("http://192.168.10.12:5020/updateRetention", {
+    fetch("http://192.168.200.10:5020/updateRetention", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(retention),
